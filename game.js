@@ -32,6 +32,14 @@ if (!started) {
     })
 }
 
+if (!started) {    
+    $(document).on("click",function(){
+        $("h1").text("Level "+level);
+        nextSequence()
+        started = true       
+    })
+}
+
 function startOver() {
     gamePattern = [];
     level = 0
