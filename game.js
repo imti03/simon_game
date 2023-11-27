@@ -32,14 +32,6 @@ if (!started) {
     })
 }
 
-if (!started) {    
-    $(document).on("click",function(){
-        $("h1").text("Level "+level);
-        nextSequence()
-        started = true       
-    })
-}
-
 function startOver() {
     gamePattern = [];
     level = 0
@@ -64,7 +56,7 @@ function checkAnswer (currentLevel) {
             $("body").removeClass("game-over")
         },200)
 
-        $("h1").text("Game Over, Press Any Key/click to Restart")
+        $("h1").text("Game Over, Press Any Key to Restart")
 
         startOver()
 
